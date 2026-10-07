@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AutoRepuestos Joshi | Repuestos para su vehículo</title>
+  <meta name="description" content="Repuestos para autos y camionetas: frenos, suspensión, filtros, baterías y más. Busque la pieza por marca, modelo y año.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/estilos.css" rel="stylesheet">
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-md navbar-dark bg-asfalto sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="#inicio">AutoRepuestos Joshi</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Abrir menú">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#categorias">Categorías</a></li>
+          <li class="nav-item"><a class="nav-link" href="#productos">Productos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#nosotros">Por qué elegirnos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header id="inicio" class="hero text-white">
+    <div class="container py-4 py-md-5">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-6">
+          <h1 class="display-4">La pieza correcta para su vehículo, sin vueltas.</h1>
+          <p class="lead">Elija marca, modelo y año y le mostramos los repuestos que le calzan.</p>
+        </div>
+        <div class="col-lg-5 offset-lg-1">
+          <form class="buscador p-3 p-md-4" action="#productos" method="get">
+            <h2 class="h4 mb-3">Busque por vehículo</h2>
+            <div class="mb-3">
+              <label for="marca" class="form-label">Marca</label>
+              <select id="marca" class="form-select">
+                <option>Toyota</option><option>Nissan</option><option>Honda</option>
+                <option>Hyundai</option><option>Kia</option><option>Mitsubishi</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label for="modelo" class="form-label">Modelo</label>
+              <input id="modelo" type="text" class="form-control" placeholder="Ejemplo: Corolla">
+            </div>
+            <div class="mb-3">
+              <label for="anio" class="form-label">Año</label>
+              <input id="anio" type="number" class="form-control" min="1990" max="2026" placeholder="Ejemplo: 2012">
+            </div>
+            <button type="submit" class="btn btn-ambar w-100 btn-lg">Buscar repuestos</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="categorias" class="py-5">
+      <div class="container">
+        <h2 class="mb-4">Categorías</h2>
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-3">
+        <div class="col">
+          <a href="#productos" class="categoria d-block h-100 p-3 text-decoration-none">
+            <span class="categoria-icono" aria-hidden="true">🛑</span>
+            <h3 class="h5 mt-2 mb-1">Frenos</h3>
+            <p class="mb-0 small">Pastillas, discos, tambores y líquido de frenos.</p>
+          </a>
+        </div>
+        <div class="col">
+          <a href="#productos" class="categoria d-block h-100 p-3 text-decoration-none">
+            <span class="categoria-icono" aria-hidden="true">🔧</span>
+            <h3 class="h5 mt-2 mb-1">Suspensión</h3>
+            <p class="mb-0 small">Amortiguadores, resortes, rótulas y terminales.</p>
+          </a>
+        </div>
+        <div class="col">
+          <a href="#productos" class="categoria d-block h-100 p-3 text-decoration-none">
+            <span class="categoria-icono" aria-hidden="true">⚙️</span>
+            <h3 class="h5 mt-2 mb-1">Motor</h3>
+            <p class="mb-0 small">Bandas, bombas, empaques y kits de distribución.</p>
+          </a>
+        </div>
+        <div class="col">
+          <a href="#productos" class="categoria d-block h-100 p-3 text-decoration-none">
+            <span class="categoria-icono" aria-hidden="true">🧴</span>
+            <h3 class="h5 mt-2 mb-1">Filtros</h3>
+            <p class="mb-0 small">De aceite, aire, combustible y cabina.</p>
+          </a>
+        </div>
+        <div class="col">
+          <a href="#productos" class="categoria d-block h-100 p-3 text-decoration-none">
+            <span class="categoria-icono" aria-hidden="true">🛢️</span>
+            <h3 class="h5 mt-2 mb-1">Aceites y lubricantes</h3>
+            <p class="mb-0 small">Sintéticos y convencionales para cada motor.</p>
+          </a>
+        </div>
+        <div class="col">
+          <a href="#productos" class="categoria d-block h-100 p-3 text-decoration-none">
+            <span class="categoria-icono" aria-hidden="true">🔋</span>
+            <h3 class="h5 mt-2 mb-1">Baterías y sistema eléctrico</h3>
+            <p class="mb-0 small">Baterías, alternadores, motores de arranque y fusibles.</p>
+          </a>
+        </div>
+        <div class="col">
+          <a href="#productos" class="categoria d-block h-100 p-3 text-decoration-none">
+            <span class="categoria-icono" aria-hidden="true">🔥</span>
+            <h3 class="h5 mt-2 mb-1">Encendido</h3>
+            <p class="mb-0 small">Bujías, cables, bobinas y sensores.</p>
+          </a>
+        </div>
+        <div class="col">
+          <a href="#productos" class="categoria d-block h-100 p-3 text-decoration-none">
+            <span class="categoria-icono" aria-hidden="true">🛞</span>
+            <h3 class="h5 mt-2 mb-1">Llantas y rines</h3>
+            <p class="mb-0 small">Llantas nuevas, rines y accesorios de montaje.</p>
+          </a>
+        </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="productos" class="py-5 bg-gris">
+      <div class="container">
+        <h2 class="mb-1">Más vendidos</h2>
+        <p class="text-secondary mb-4">Piezas de mantenimiento que se piden toda la semana.</p>
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+        <div class="col">
+          <article class="card h-100 producto">
+            <div class="card-body">
+              <h3 class="h5 card-title">Pastillas de freno delanteras</h3>
+              <p class="card-text text-secondary">Cerámicas, bajo ruido, juego de 4</p>
+            </div>
+            <div class="card-footer d-flex justify-content-between align-items-center">
+              <span class="precio">L 650</span>
+              <a href="#contacto" class="btn btn-sm btn-outline-dark">Cotizar</a>
+            </div>
+          </article>
+        </div>
+        <div class="col">
+          <article class="card h-100 producto">
+            <div class="card-body">
+              <h3 class="h5 card-title">Filtro de aceite</h3>
+              <p class="card-text text-secondary">Compatible con la mayoría de sedanes</p>
+            </div>
+            <div class="card-footer d-flex justify-content-between align-items-center">
+              <span class="precio">L 120</span>
+              <a href="#contacto" class="btn btn-sm btn-outline-dark">Cotizar</a>
+            </div>
+          </article>
+        </div>
+        <div class="col">
+          <article class="card h-100 producto">
+            <div class="card-body">
+              <h3 class="h5 card-title">Aceite sintético 5W-30</h3>
+              <p class="card-text text-secondary">Galón, protección para motor a gasolina</p>
+            </div>
+            <div class="card-footer d-flex justify-content-between align-items-center">
+              <span class="precio">L 780</span>
+              <a href="#contacto" class="btn btn-sm btn-outline-dark">Cotizar</a>
+            </div>
+          </article>
+        </div>
+        <div class="col">
+          <article class="card h-100 producto">
+            <div class="card-body">
+              <h3 class="h5 card-title">Batería 12 V 650 CCA</h3>
+              <p class="card-text text-secondary">Libre de mantenimiento, garantía incluida</p>
+            </div>
+            <div class="card-footer d-flex justify-content-between align-items-center">
+              <span class="precio">L 2,850</span>
+              <a href="#contacto" class="btn btn-sm btn-outline-dark">Cotizar</a>
+            </div>
+          </article>
+        </div>
+        <div class="col">
+          <article class="card h-100 producto">
+            <div class="card-body">
+              <h3 class="h5 card-title">Bujías de iridio (juego de 4)</h3>
+              <p class="card-text text-secondary">Mejor arranque y menor consumo</p>
+            </div>
+            <div class="card-footer d-flex justify-content-between align-items-center">
+              <span class="precio">L 920</span>
+              <a href="#contacto" class="btn btn-sm btn-outline-dark">Cotizar</a>
+            </div>
+          </article>
+        </div>
+        <div class="col">
+          <article class="card h-100 producto">
+            <div class="card-body">
+              <h3 class="h5 card-title">Amortiguador delantero</h3>
+              <p class="card-text text-secondary">Pieza individual, gas presurizado</p>
+            </div>
+            <div class="card-footer d-flex justify-content-between align-items-center">
+              <span class="precio">L 1,350</span>
+              <a href="#contacto" class="btn btn-sm btn-outline-dark">Cotizar</a>
+            </div>
+          </article>
+        </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="nosotros" class="py-5">
+      <div class="container">
+        <h2 class="mb-4">Por qué elegirnos</h2>
+        <div class="row g-4">
+          <div class="col-md-4">
+            <h3 class="h5">Compatibilidad verificada</h3>
+            <p>Confirmamos que la pieza corresponde a su marca, modelo y año antes de venderla.</p>
+          </div>
+          <div class="col-md-4">
+            <h3 class="h5">Garantía por escrito</h3>
+            <p>Baterías, amortiguadores y piezas eléctricas incluyen garantía de fábrica.</p>
+          </div>
+          <div class="col-md-4">
+            <h3 class="h5">Atención técnica</h3>
+            <p>Asesores que conocen mecánica y le ayudan a elegir sin gastar de más.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacto" class="py-5 bg-asfalto text-white">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-md-6">
+            <h2 class="text-ambar">Pida su cotización</h2>
+            <p>Cuéntenos qué pieza necesita y los datos de su vehículo. Le respondemos el mismo día.</p>
+            <ul class="list-unstyled mb-0">
+              <li>Dirección: calle y número de ejemplo</li>
+              <li>Horario: lunes a sábado, 8:00 a. m. a 5:30 p. m.</li>
+              <li>Teléfono: 0000-0000</li>
+            </ul>
+          </div>
+          <div class="col-md-6">
+            <form action="#contacto" method="get">
+              <div class="mb-3">
+                <label for="nombre" class="form-label">Nombre</label>
+                <input id="nombre" type="text" class="form-control" required>
+              </div>
+              <div class="mb-3">
+                <label for="telefono" class="form-label">Teléfono</label>
+                <input id="telefono" type="tel" class="form-control" required>
+              </div>
+              <div class="mb-3">
+                <label for="pieza" class="form-label">Pieza y vehículo</label>
+                <textarea id="pieza" class="form-control" rows="3" placeholder="Ejemplo: pastillas de freno, Toyota Corolla 2012"></textarea>
+              </div>
+              <button type="submit" class="btn btn-ambar">Enviar solicitud</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-asfalto text-white-50 py-3 border-top border-secondary">
+    <div class="container text-center small">&copy; 2026 AutoRepuestos Joshi. Todos los derechos reservados.</div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
